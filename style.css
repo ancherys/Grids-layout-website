@@ -1,0 +1,371 @@
+:root {
+  --primary-color: #063c75;
+  --secondary-color: #ffb45a;
+  --light-color: #f3f3f3;
+  --dark-color: #333;
+  --white-reg: #fff;
+  --max-width: 1280px;
+}
+
+.category {
+  --sports-color: #ffb45a;
+  --entertainment-color: #9acd32;
+  --tech-color: #d3d3d3;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1.5;
+  background: var(--light-color);
+}
+
+a {
+  color: var(--dark-color);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+img {
+  width: 100%; /* Images by default goes beyond the containers */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Staatliches", cursive;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+input {
+  border-radius: 15px;
+}
+
+.wrapper {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.category {
+  display: inline-block;
+  color: var(--white-reg);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  padding: 0.4rem 0.6rem;
+  border-radius: 15px;
+  margin-bottom: 0.5rem;
+}
+
+.category-sports {
+  background: var(--sports-color);
+  margin-top: 0.5rem;
+}
+.category-entertainment {
+  background: var(--entertainment-color);
+  margin-top: 0.5rem;
+}
+.category-technology {
+  background: var(--tech-color);
+  margin-top: 0.5rem;
+}
+
+.large-heading {
+  font-size: 3rem;
+}
+
+.button {
+  display: inline-block;
+  border: none;
+  border-radius: 15px;
+  background: var(--primary-color);
+  color: var(--white-reg);
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.button-light {
+  background: var(--light-color);
+}
+.button-primary {
+  background: var(--primary-color);
+}
+.button-secondary {
+  background: var(--secondary-color);
+}
+
+.button-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.card {
+  background: var(--white-reg);
+  padding: 1rem;
+}
+
+.list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px #555 solid;
+  width: 90%;
+}
+
+.list li a:hover {
+  color: var(--secondary-color) !important;
+}
+
+.background-dark {
+  background: var(--dark-color);
+  color: var(--white-reg);
+}
+
+.background-primary {
+  background: var(--primary-color);
+  color: var(--white-reg);
+}
+
+.background-secondary {
+  background: var(--secondary-color);
+  color: var(--white-reg);
+}
+
+/*  Article and headings reikia targetint atskirai */
+
+.background-dark h1,
+.background-dark h2,
+.background-dark h3,
+.background-dark a,
+.background-primary h1,
+.background-primary h2,
+.background-primary h3,
+.background-primary a,
+.background-secondary h1,
+.background-secondary h2,
+.background-secondary h3,
+.background-secondary a {
+  color: var(--white-reg);
+}
+
+.py-1 {
+  padding: 1.5rem 0;
+}
+
+.py-2 {
+  padding: 2rem 0;
+}
+
+.py-3 {
+  padding: 3rem 0;
+}
+
+.p-1 {
+  padding: 1.5rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.p-3 {
+  padding: 3rem;
+}
+
+/* Nav */
+
+#main-nav {
+  background: var(--white-reg);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#main-nav .wrapper {
+  display: grid;
+  grid-template-columns: 6fr 3fr 2fr;
+  padding: 1rem;
+  align-items: center; /* V */
+}
+
+#main-nav .logo {
+  width: 180px;
+}
+
+#main-nav ul {
+  justify-self: end;
+  display: flex;
+}
+
+#main-nav ul li a {
+  padding: 0.75rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+#main-nav ul li a.current {
+  background: var(--primary-color);
+  color: var(--white-reg);
+  border-radius: 15px;
+}
+
+#main-nav ul li a:hover {
+  font-size: 1.2rem;
+}
+
+#main-nav .social-links {
+  justify-self: center; /* self tik item, ne parent */
+}
+#main-nav .social-links i {
+  /* color: ; */
+  margin-right: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+#main-nav .social-links i:hover {
+  color: var(--secondary-color);
+}
+
+/* Showcase */
+
+#showcase {
+  color: var(--white-reg);
+  background: var(--dark-color);
+  padding: 2rem;
+  position: relative; /* pries tai absolute, position first relative container  */
+}
+
+#showcase .showcase-content p {
+  margin-bottom: 1rem;
+}
+
+#showcase:before {
+  content: "";
+  background: url("./images/main.jpg") no-repeat center center/cover;
+  /* Layering background image on top of showcase */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+#showcase .showcase-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center; /* H */
+  align-items: center; /* V */
+  height: 50vh;
+}
+
+#showcase .showcase-content {
+  z-index: 1;
+}
+
+/* Articles  */
+
+#home-articles .articles-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+#home-articles .articles-wrapper > *:first-child, /* vietoje article galima irasyti *, jeigu ateityje keisti article i div ar pan ir target direct child naudoti > */
+#home-articles .articles-wrapper > *:last-child {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  grid-column: 1 / span 2;
+  align-items: center;
+}
+
+#home-articles .articles-wrapper > *:last-child {
+  grid-column: 2 / span 2;
+}
+
+#article .meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eee;
+  padding: 0.5rem;
+}
+
+#article .meta .category {
+  margin-top: 0.4rem;
+}
+
+/* Footer */
+
+#main-footer {
+  background: var(--dark-color);
+  color: var(--white-reg);
+}
+
+#main-footer img {
+  width: 150px;
+}
+
+#main-footer a {
+  color: var(--white-reg);
+}
+
+#main-footer .footer-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5rem;
+}
+
+#main-footer .footer-wrapper > *:last-child {
+  background: #444;
+  grid-column: 1 / span 4;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.7rem;
+  border-radius: 15px;
+}
+
+#main-footer .footer-wrapper input[type="email"] {
+  width: 90%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#main-footer .footer-wrapper input[type="submit"] {
+  width: 90%;
+}
+
+/* About */
+
+.page-wrapper {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  margin: 2rem 0;
+  grid-gap: 1, 5rem;
+}
+
+.page-wrapper > *:first-child {
+  grid-row: 1 / span 3;
+}
